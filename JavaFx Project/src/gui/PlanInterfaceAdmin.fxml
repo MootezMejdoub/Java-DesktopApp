@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1026.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PlanInterfaceAdminController">
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1026.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="PLANS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="2.0" layoutY="1.0" prefHeight="461.0" prefWidth="1026.0">
+                           <content>
+                              <VBox fx:id="PlanVboxOfAdmin" prefHeight="459.0" prefWidth="1022.0" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Ajouter">
+               <content>
+                  <AnchorPane fx:id="BIGPANE" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Line endX="262.0" layoutX="432.0" layoutY="361.0" startX="-100.0" />
+                        <Line endX="-175.0" endY="243.0" layoutX="495.0" layoutY="112.0" startX="-175.0" startY="-76.0" />
+                        <TextField fx:id="idGuide" layoutX="342.0" layoutY="37.0" prefHeight="32.0" prefWidth="123.0" promptText="GUIDE" />
+                        <TextField fx:id="note" layoutX="548.0" layoutY="37.0" prefHeight="32.0" prefWidth="123.0" promptText="note" />
+                        <TextField fx:id="titre" layoutX="342.0" layoutY="90.0" prefHeight="32.0" prefWidth="123.0" promptText="titre" />
+                        <TextField fx:id="description" layoutX="548.0" layoutY="90.0" prefHeight="32.0" prefWidth="123.0" promptText="description" />
+                        <TextField fx:id="nmbrPlaceMax" layoutX="342.0" layoutY="136.0" prefHeight="32.0" prefWidth="123.0" promptText="nombre de place max" />
+                        <TextField fx:id="prix" layoutX="548.0" layoutY="136.0" prefHeight="32.0" prefWidth="123.0" promptText="prix" />
+                        <TextField fx:id="nmbrPlaceReste" layoutX="342.0" layoutY="178.0" prefHeight="32.0" prefWidth="123.0" promptText="nombre de place reste" />
+                        <TextField fx:id="pointDepart" layoutX="548.0" layoutY="178.0" prefHeight="32.0" prefWidth="123.0" promptText="pointDepart" />
+                        <DatePicker fx:id="dateDebut" layoutX="342.0" layoutY="223.0" prefHeight="32.0" prefWidth="123.0" promptText="date debut" style="-fx-background-color: transparent;" />
+                        <DatePicker fx:id="dateFin" layoutX="548.0" layoutY="223.0" prefHeight="32.0" prefWidth="123.0" promptText="date fin" style="-fx-background-color: transparent;" />
+                        <Button fx:id="createPlanZina" layoutX="528.0" layoutY="324.0" mnemonicParsing="false" onAction="#create" prefHeight="32.0" prefWidth="166.0" style="-fx-background-color: #00ff00;" text="Ajouter" textFill="WHITE" />
+                        <Button fx:id="createPlan" layoutX="525.0" layoutY="321.0" mnemonicParsing="false" onAction="#create" prefHeight="32.0" prefWidth="166.0" style="-fx-background-color: #373737;" text="Ajouter" textFill="LIME" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</Pane>

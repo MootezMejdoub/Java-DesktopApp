@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TableUsersController">
+    <children>
+      <TextField fx:id="mdp" layoutX="481.0" layoutY="471.0" prefHeight="16.0" prefWidth="13.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="search" layoutX="309.0" layoutY="471.0" onAction="#search" prefHeight="16.0" prefWidth="6.0" style="-fx-font: white;" styleClass="tf" stylesheets="@TableUsers.css" />
+      <TableView fx:id="tblUsers" layoutX="704.0" layoutY="173.0" onMouseClicked="#handleMouseAction" prefHeight="243.0" prefWidth="390.0" styleClass="blue-btn" stylesheets="@TableUsers.css">
+        <columns>
+          <TableColumn fx:id="nomCol" prefWidth="87.0" text="Nom" />
+          <TableColumn fx:id="prenomCol" prefWidth="108.0" text="Prenom" />
+            <TableColumn fx:id="emailCol" prefWidth="144.0" text="Email" />
+            <TableColumn fx:id="typeCol" minWidth="5.0" prefWidth="89.0" text="Type" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="-1.0" prefHeight="700.0" prefWidth="243.0" style="-fx-background-color: #373737;">
+         <children>
+            <Pane prefHeight="83.0" prefWidth="239.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="54.0" layoutY="23.0" prefHeight="17.0" prefWidth="114.0" text="MatchiGo" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label alignment="BASELINE_LEFT" layoutX="29.0" layoutY="98.0" prefHeight="32.0" prefWidth="181.0" text="Accueil" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f5f3f3" glyphName="HOME" size="20" text="" wrappingWidth="20.0" />
+               </graphic>
+            </Label>
+            <Button fx:id="statics" layoutX="-1.0" layoutY="198.0" mnemonicParsing="false" onAction="#toStat" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="statistiques" />
+            <Button fx:id="reclamation" layoutX="4.0" layoutY="245.0" mnemonicParsing="false" onAction="#toRec" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Reclamation" />
+            <FontAwesomeIconView fill="#f5f3f3" glyphName="HOME" layoutX="25.0" layoutY="228.0" size="20" text="" wrappingWidth="20.0" />
+            <Button fx:id="plan" layoutX="4.0" layoutY="288.0" mnemonicParsing="false" onAction="#toPlan" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Plans" />
+            <Button fx:id="place" layoutX="-1.0" layoutY="337.0" mnemonicParsing="false" onAction="#toPlace" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Places" />
+            <Button fx:id="statics1111" layoutX="1.0" layoutY="387.0" mnemonicParsing="false" onAction="#toStat" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="statistiques" />
+            <Button fx:id="statics2" layoutX="4.0" layoutY="148.0" mnemonicParsing="false" onAction="#toStat" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Account-Admin" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="236.0" prefHeight="83.0" prefWidth="1033.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="btnsearch" layoutX="28.0" layoutY="26.0" mnemonicParsing="false" onAction="#search" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: black;" styleClass="btn" stylesheets="@TableUsers.css" text="chercher :" />
+         </children></Pane>
+          <TextField fx:id="txtNom" layoutX="260.0" layoutY="263.0" prefHeight="32.0" prefWidth="278.0" promptText="Nom" />
+          <TextField fx:id="txtPrenom" layoutX="260.0" layoutY="221.0" prefHeight="32.0" prefWidth="278.0" promptText="Prenom" />
+          <TextField fx:id="txtEmail" layoutX="260.0" layoutY="348.0" prefHeight="32.0" prefWidth="278.0" promptText="email" />
+      <TextField fx:id="txtTel" layoutX="260.0" layoutY="392.0" prefHeight="32.0" prefWidth="278.0" promptText="Num tel" />
+          <DatePicker fx:id="txtDN" layoutX="260.0" layoutY="305.0" prefHeight="32.0" prefWidth="278.0" promptText="date naissance" style="-fx-background-color: transparent;" />
+      <TextField fx:id="txtAdresse" layoutX="260.0" layoutY="484.0" prefHeight="32.0" prefWidth="278.0" promptText="Adresse" />
+          <Button fx:id="ajouteradmin" layoutX="781.0" layoutY="613.0" mnemonicParsing="false" onAction="#ajouteradmin" prefHeight="32.0" prefWidth="205.0" style="-fx-background-color: #373737;" styleClass="blue-btn" stylesheets="@TableUsers.css" text="ajouter" />
+      <Button fx:id="btnmodifier" layoutX="256.0" layoutY="548.0" mnemonicParsing="false" onAction="#modifier" prefHeight="32.0" prefWidth="278.0" style="-fx-background-color: #373737;" styleClass="blue-btn" stylesheets="@TableUsers.css" text="Modifier" />
+      <TextField fx:id="txtType" layoutX="260.0" layoutY="444.0" prefHeight="32.0" prefWidth="268.0" promptText="type" />
+      <Separator layoutX="560.0" layoutY="94.0" orientation="VERTICAL" prefHeight="431.0" prefWidth="5.0" />
+      <Label layoutX="584.0" layoutY="111.0" prefHeight="32.0" prefWidth="152.0" text="Ajouter un admin" />
+      <TextField fx:id="noma" layoutX="797.0" layoutY="436.0" prefHeight="32.0" prefWidth="173.0" promptText="Nom" />
+      <TextField fx:id="emaila" layoutX="797.0" layoutY="497.0" prefHeight="26.0" prefWidth="173.0" promptText="email" />
+      <TextField fx:id="typea" layoutX="797.0" layoutY="554.0" prefHeight="26.0" prefWidth="173.0" promptText="Type" />
+      <Label layoutX="249.0" layoutY="109.0" text="Compte" />
+    </children>
+</AnchorPane>

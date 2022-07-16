@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ReclamationAdminController">
+    <stylesheets>
+        <URL value="@reclamationadmin.css" />
+    </stylesheets>
+   <children>
+      <MediaView fx:id="mediaViewAdmin" fitHeight="800.0" fitWidth="1300.0" layoutX="-58.0" layoutY="-27.0">
+         <effect>
+            <MotionBlur radius="31.26" />
+         </effect>
+      </MediaView>
+      <Pane fx:id="pnlOverview" layoutX="147.0" layoutY="84.0" prefHeight="191.0" prefWidth="970.0" style="-fx-background-color: N/A;">
+         <children>
+            <TextField fx:id="searchKey" layoutX="646.0" layoutY="37.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #F2F4F4; -fx-border-color: #F2F4F4; -fx-border-radius: 38; -fx-border-width: 2; -fx-background-radius: 20;" />
+            <Label layoutY="-36.0" text="Liste Des Reclamations" textFill="#fdfefe">
+               <font>
+                  <Font name="French Script MT" size="77.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="76.0" prefWidth="661.0">
+               <children>
+                  <VBox fx:id="nb" accessibleRole="BUTTON" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="212.0">
+                     <children>
+                        <Label fx:id="nbrReclamation" prefHeight="8.0" prefWidth="56.0" text="000" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="16.997500000000002" width="48.99" />
+                           </effect>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="156.0" text="Reclamations" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="8.445" width="14.78" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="nbrReclamationEnAttente" prefHeight="72.0" prefWidth="60.0" text="1000" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow radius="8.445" width="14.78" />
+                                 </effect>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="48.0" prefWidth="99.0" text="Pending" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow radius="9.2225" width="17.89" />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="121.0" prefWidth="100.0" />
+                     </children>
+                     
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="123.0" layoutY="296.0" prefHeight="318.0" prefWidth="912.0" style="-fx-background-color: -fx-background-color; -fx-region-background: N/A; -fx-border-color: white; -fx-border-radius: 11; -fx-border-width: 3;" styleClass="scroll-pane" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="55.0" text="ID" visible="false" />
+          <TableColumn fx:id="Nom" prefWidth="95.0" text="Nom" />
+            <TableColumn fx:id="Prenom" prefWidth="97.0" text="Prenom" />
+            <TableColumn fx:id="Email" prefWidth="129.0" text="Email" />
+            <TableColumn fx:id="Description" prefWidth="231.0" text="Description" />
+            <TableColumn fx:id="DateCreation" prefWidth="106.0" text="Date Creation" />
+            <TableColumn fx:id="Reference" prefWidth="105.0" text="Reference" />
+            <TableColumn fx:id="Etat" prefWidth="86.0" text="Etat" />
+        </columns>
+         <effect>
+            <DropShadow color="#6f5c5c" height="64.54" radius="25.55" width="39.66" />
+         </effect>
+      </TableView>
+      <Button fx:id="replyBtn" layoutX="351.0" layoutY="634.0" mnemonicParsing="false" onAction="#replyReclamation" prefHeight="43.0" prefWidth="156.0" styleClass="btn" stylesheets="@reclamationvideo.css" text="Reply" />
+      <Button fx:id="deleteBtn" layoutX="632.0" layoutY="634.0" mnemonicParsing="false" onAction="#deleteReclamation" prefHeight="43.0" prefWidth="156.0" styleClass="btn" stylesheets="@reclamationvideo.css" text="Delete" />
+      <Button fx:id="imprimer" layoutX="1059.0" layoutY="434.0" mnemonicParsing="false" onAction="#imprimer" prefHeight="43.0" prefWidth="116.0" styleClass="btn" stylesheets="@reclamationvideo.css" text="Imprimer" />
+      <Button layoutX="1060.0" layoutY="492.0" mnemonicParsing="false" onAction="#exporterXl" styleClass="btn" stylesheets="@reclamationvideo.css" text="Exporter XL" fx:id="xl" />
+      <Button fx:id="back" layoutX="528.0" layoutY="656.0" mnemonicParsing="false" onAction="#backhome" prefHeight="43.0" prefWidth="84.0" styleClass="btn" stylesheets="@reclamationvideo.css" text="back" />
+   </children>
+</AnchorPane>

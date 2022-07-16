@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.gradient-background
+{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%,#121010,#2e2929);
+}
+
+.line-color
+{
+    -fx-background-color:#F3ABB5;
+}
+
+.container
+{
+    -fx-background-color:rgba(255,255,255,0.2);
+    -fx-background-radius:10;
+}

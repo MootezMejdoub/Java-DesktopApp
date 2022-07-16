@@ -1,0 +1,40 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+    
+    .btn{
+        
+    
+    
+        -fx-font-weight:bold;
+        -fx-background-color:transparent;
+        -fx-background-radius:22;
+        -fx-font-size:16;
+        -fx-text-fill:white ;
+        -fx-border-radius: 20 ;
+        -fx-border-color:white;
+        -fx-border-width:3;}
+    
+    .btn:hover{
+        -fx-font-weight:bold;
+        -fx-background-color:white;
+        -fx-background-radius:22;
+        -fx-font-size:16;
+        -fx-text-fill:#37474f ;
+        -fx-border-radius: 20 ;
+        -fx-border-width:3;
+        
+    }
+    .btn:pressed{
+        -fx-font-weight:bold;
+        -fx-background-color:white;
+        -fx-background-radius:22;
+        -fx-font-size:16;
+        -fx-text-fill:#37474f ;
+        -fx-border-radius: 20 ;
+        -fx-border-width:3;
+        -fx-rotate:10;
+    }
+

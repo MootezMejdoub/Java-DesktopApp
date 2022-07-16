@@ -1,0 +1,76 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+    .table-view
+    {
+        -fx-background-color: transparent;
+    }
+    .table-view:focused
+        {
+       -fx-background-color: transparent; 
+        
+    }
+.tf{
+    -fx-background-color: transparent; 
+    -fx-text-fill: white;
+}
+    .table-view.column-header-background
+    {
+        -fx-background-color: linear-gradient(#131313 0% ,#424141 100%);
+    }
+    .table-view.column-header-background.label
+    {
+        -fx-background-color: black;
+        -fx-text-fill: white;
+        
+    }
+    
+    .tb{
+        -fx-text-fill: white;
+    }
+    .table-view.column-header
+    {
+        -fx-background-color: transparent;
+    }
+    .table-view.table-cell
+    {
+        -fx-background-color: -fx-table-cell-border-color, #33698F;
+        -fx-background-insets:0,0.0 0 1 0;
+        
+       -fx-padding:0.0em;
+    }
+  .button
+  {
+     -fx-background-color: #373737;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+  }
+    
+  .btn{
+      -fx-text-fill: white;
+  }
+  .search
+  {
+       -fx-font-color:white;
+  }
+}
+
+.textArea
+{
+    -fx-background-color:transparent;
+    
+}
+
+.blue-btn{
+    -fx-background-color: #373737;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #fffff;
+}
+
+.button-container-mouse-moved:hover
+{
+    -fx-background-color: rgba(0,0,0,0.1);
+}

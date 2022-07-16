@@ -1,0 +1,59 @@
+/*html { box-sizing: border-box; height: 100% } *, *::before, *::after { box-sizing: inherit; }
+body { font-size: 10px; display: flex; align-items: center; justify-content: center; min-height: 100vh }
+// ^ resets / layout
+
+$bg: #2f2f2f;
+$fg: #06c17f;
+$border-width: .5rem;
+$corner-size: 3rem;
+$dur: .3s;
+
+body {
+  background: $bg;
+}
+
+.corner-button {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .02rem;
+  cursor: pointer;
+  background: transparent;
+  border: $border-width solid currentColor;
+  padding: 1.5rem 2rem;
+  font-size: 2.2rem;
+  color: $fg;
+  position: relative;
+  transition: color $dur;
+  z-index: 1;
+  
+  &:hover {
+    color: pink;
+    &::before { width: 0; }
+    &::after { height: 0; }
+  }
+  &:active {
+    border-width: $border-width / 2;
+  }
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    background: $bg;
+    z-index: -1;
+    transition: all $dur;
+  }
+  //the 101% is because of a pixel rounding issue in firefox
+  &::before {
+    width: calc(100% - #{$corner-size});
+    height: calc(101% + #{$border-width * 2});
+    top: -$border-width;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    height: calc(100% - #{$corner-size});
+    width: calc(101% + #{$border-width * 2});
+    left: -$border-width;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}*/

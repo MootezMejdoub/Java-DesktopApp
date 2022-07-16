@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workshop_3a6.gui.DetailsWindowController">
+   <children>
+      <Label layoutX="79.0" layoutY="87.0" text="id" />
+      <Label layoutX="79.0" layoutY="192.0" text="nom" />
+      <Label layoutX="79.0" layoutY="287.0" text="prenom" />
+      <TextField fx:id="tfId" layoutX="243.0" layoutY="91.0" />
+      <TextField fx:id="tfNom" layoutX="243.0" layoutY="196.0" />
+      <TextField fx:id="tfPrenom" layoutX="243.0" layoutY="291.0" />
+      <Button fx:id="btnList" layoutX="462.0" layoutY="196.0" mnemonicParsing="false" onAction="#onClick" text="Lister tout" />
+   </children>
+</AnchorPane>

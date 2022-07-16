@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<Pane fx:id="PLAN_PANE_GUIDE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1026.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PlanInterfaceGuideController">
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1026.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="PLANS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="2.0" layoutY="1.0" prefHeight="461.0" prefWidth="1026.0">
+                           <content>
+                              <VBox fx:id="PlanVboxOfGuide" prefHeight="459.0" prefWidth="1022.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Ajouter">
+               <content>
+                  <AnchorPane fx:id="BIGPANE" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Line endX="262.0" layoutX="749.0" layoutY="439.0" startX="-100.0" />
+                        <Line endX="-175.0" endY="243.0" layoutX="221.0" layoutY="110.0" startX="-175.0" startY="-76.0" />
+                        <TextField fx:id="titre" layoutX="182.0" layoutY="90.0" prefHeight="32.0" prefWidth="123.0" promptText="titre" />
+                        <TextField fx:id="prix" layoutX="182.0" layoutY="178.0" prefHeight="32.0" prefWidth="123.0" promptText="prix" />
+                        <TextField fx:id="pointDepart" layoutX="182.0" layoutY="223.0" prefHeight="32.0" prefWidth="123.0" promptText="pointDepart" />
+                        <DatePicker fx:id="dateDebut" layoutX="62.0" layoutY="267.0" prefHeight="32.0" prefWidth="245.0" promptText="date debut" style="-fx-background-color: transparent;" />
+                        <DatePicker fx:id="dateFin" layoutX="62.0" layoutY="308.0" prefHeight="32.0" prefWidth="245.0" promptText="date fin" style="-fx-background-color: transparent;" />
+                        <Button fx:id="createPlanZina" layoutX="845.0" layoutY="402.0" mnemonicParsing="false" onAction="#create" prefHeight="32.0" prefWidth="166.0" style="-fx-background-color: #00ff00;" text="Ajouter" textFill="WHITE" />
+                        <Button fx:id="createPlan" layoutX="842.0" layoutY="399.0" mnemonicParsing="false" onAction="#create" prefHeight="32.0" prefWidth="166.0" style="-fx-background-color: #373737;" text="Ajouter" textFill="LIME" />
+                        <Label layoutX="64.0" layoutY="98.0" text="Titre" />
+                        <Label layoutX="62.0" layoutY="144.0" text="Nombre dePlaces" />
+                        <ChoiceBox fx:id="nmbrPlaceMax" layoutX="181.0" layoutY="140.0" prefHeight="25.0" prefWidth="124.0" />
+                        <Label layoutX="62.0" layoutY="185.0" text="Prix (dt)" />
+                        <Label layoutX="62.0" layoutY="231.0" text="Point de Depart" />
+                        <TextArea fx:id="description" layoutX="325.0" layoutY="88.0" prefHeight="252.0" prefWidth="314.0" promptText="description" wrapText="true" />
+                        <Button fx:id="InputPlanImage" layoutX="902.0" layoutY="354.0" mnemonicParsing="false" onAction="#addImage" text="Button" />
+                        <ScrollPane layoutX="711.0" layoutY="86.0" prefHeight="254.0" prefWidth="267.0">
+                           <content>
+                              <VBox fx:id="AddImageVBox" prefHeight="248.0" prefWidth="262.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</Pane>

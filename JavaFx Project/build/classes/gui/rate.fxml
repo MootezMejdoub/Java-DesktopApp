@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="679.0" prefWidth="922.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RateController">
+    <stylesheets>
+        <URL value="@rate.css" />
+    </stylesheets>
+   <children>
+      <ComboBox fx:id="cbrate" layoutX="471.0" layoutY="350.0" onMouseClicked="#remplirevent" prefWidth="150.0" promptText="Liste guides" />
+      <Rating fx:id="rateev" layoutX="465.0" layoutY="241.0" rating="0.0" />
+      <Button fx:id="btnrate" layoutX="688.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#rateev" text="Add" />
+      <AnchorPane layoutX="-10.0" prefHeight="700.0" prefWidth="243.0" style="-fx-background-color: #373737;">
+         <children>
+            <Pane prefHeight="83.0" prefWidth="251.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="54.0" layoutY="23.0" prefHeight="17.0" prefWidth="114.0" text="MatchiGo" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label alignment="BASELINE_LEFT" layoutX="29.0" layoutY="98.0" prefHeight="32.0" prefWidth="181.0" text="Accueil" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f5f3f3" glyphName="HOME" size="20" text="" wrappingWidth="20.0" />
+               </graphic>
+            </Label>
+            <Button fx:id="statics" layoutX="-1.0" layoutY="198.0" mnemonicParsing="false" onAction="#toStat" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="statistiques" />
+            <Button fx:id="reclamation" layoutX="4.0" layoutY="245.0" mnemonicParsing="false" onAction="#toRec" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Reclamation" />
+            <Button fx:id="plan" layoutX="4.0" layoutY="288.0" mnemonicParsing="false" onAction="#toPlan" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Plans" />
+            <Button fx:id="place" layoutX="6.0" layoutY="334.0" mnemonicParsing="false" onAction="#toPlace" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Places" />
+            <Button fx:id="rating" layoutX="1.0" layoutY="387.0" mnemonicParsing="false" onAction="#toRate" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Rating" />
+            <Button fx:id="account" layoutX="4.0" layoutY="148.0" mnemonicParsing="false" onAction="#toAccount" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@TableUsers.css" text="Account" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="234.0" prefHeight="83.0" prefWidth="1033.0" style="-fx-background-color: black;" />
+      <Label layoutX="465.0" layoutY="109.0" prefHeight="32.0" prefWidth="194.0" text="Evaluer un guide">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="406.0" layoutY="177.0" prefHeight="6.0" prefWidth="385.0" />
+   </children>
+</AnchorPane>

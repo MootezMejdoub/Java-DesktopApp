@@ -1,0 +1,21 @@
+/* From cssbuttons.io by @alexroumi */
+.button {
+
+
+ border-radius: 15px;
+ color: #212121;
+
+ background: #e8e8e8;
+ 
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.button:hover {
+ color: #e8e8e8;
+}
+

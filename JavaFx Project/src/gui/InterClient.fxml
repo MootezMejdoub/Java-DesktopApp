@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.InterClientController">
+    <stylesheets>
+        <URL value="@TableUsers.css" />
+        
+    </stylesheets>
+    <children>
+      <TextField fx:id="mdp" layoutX="553.0" layoutY="579.0" prefHeight="25.0" prefWidth="7.0" />
+      <TextField fx:id="search" layoutX="529.0" layoutY="579.0" prefHeight="25.0" prefWidth="14.0" style="-fx-background-color: black;" />
+      
+      <Pane layoutX="236.0" prefHeight="83.0" prefWidth="965.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="58.0" layoutY="23.0" prefHeight="38.0" prefWidth="201.0" text="Espace client" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children></Pane>
+          <TextField fx:id="txtNom" layoutX="504.0" layoutY="185.0" prefHeight="32.0" prefWidth="278.0" promptText="Nom" />
+          <TextField fx:id="txtPrenom" layoutX="504.0" layoutY="143.0" prefHeight="32.0" prefWidth="278.0" promptText="Prenom" stylesheets="@styles.css" />
+          <TextField fx:id="txtEmail" layoutX="504.0" layoutY="270.0" prefHeight="32.0" prefWidth="278.0" promptText="email" />
+      <TextField fx:id="txtTel" layoutX="504.0" layoutY="314.0" prefHeight="32.0" prefWidth="278.0" promptText="Num tel" />
+          <DatePicker fx:id="txtDN" layoutX="504.0" layoutY="227.0" prefHeight="32.0" prefWidth="278.0" promptText="date naissance" />
+      <TextField fx:id="txtAdresse" layoutX="504.0" layoutY="396.0" prefHeight="32.0" prefWidth="278.0" promptText="Adresse" />
+      <TextField fx:id="txtType" layoutX="504.0" layoutY="356.0" prefHeight="32.0" prefWidth="278.0" promptText="type" />
+      <AnchorPane layoutY="-3.0" prefHeight="712.0" prefWidth="243.0" style="-fx-background-color: #373737;">
+         <children>
+            <Pane layoutY="-5.0" prefHeight="90.0" prefWidth="243.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="54.0" layoutY="23.0" prefHeight="17.0" prefWidth="114.0" text="MatchiGo" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label alignment="BASELINE_LEFT" layoutX="29.0" layoutY="98.0" prefHeight="32.0" prefWidth="181.0" stylesheets="@styles.css" text="Accueil" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f5f3f3" glyphName="HOME" size="20" text="" wrappingWidth="20.0" />
+               </graphic>
+            </Label>
+            <Button fx:id="reclamation" layoutX="-1.0" layoutY="198.0" mnemonicParsing="false" onAction="#reclamer" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@styles.css" text="Reclamation" />
+            <Button fx:id="plan" layoutX="4.0" layoutY="245.0" mnemonicParsing="false" onAction="#toPlan" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@styles.css" text="Plans" />
+            <Button fx:id="places" layoutX="4.0" layoutY="288.0" mnemonicParsing="false" onAction="#toPlace" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@styles.css" text="Places" />
+            <Button fx:id="reservation" layoutX="-1.0" layoutY="337.0" mnemonicParsing="false" onAction="#toRes" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@styles.css" text="Reservation" />
+            <Button fx:id="facture" layoutX="1.0" layoutY="387.0" mnemonicParsing="false" onAction="#toFac" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@styles.css" text="Facture" />
+            <Button fx:id="account" layoutX="4.0" layoutY="148.0" mnemonicParsing="false" onAction="#toAccount" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@styles.css" text="Account" />
+            <Button fx:id="facture1" layoutX="6.0" layoutY="380.0" mnemonicParsing="false" onAction="#toFac" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@styles.css" text="Facture" />
+            <Button fx:id="rating" layoutX="6.0" layoutY="419.0" mnemonicParsing="false" onAction="#toRate" prefHeight="32.0" prefWidth="239.0" styleClass="button-container-mouse-moved" stylesheets="@styles.css" text="Rating" />
+         </children>
+      </AnchorPane>
+      <PasswordField fx:id="newPwd" layoutX="504.0" layoutY="476.0" prefHeight="32.0" prefWidth="278.0" promptText="Nouveau mot de passe" />
+      <PasswordField fx:id="confPwd" layoutX="504.0" layoutY="515.0" prefHeight="38.0" prefWidth="278.0" promptText="Confirmer votre mot de passe" />
+      <Button fx:id="btnmodifier" layoutX="504.0" layoutY="575.0" mnemonicParsing="false" onAction="#modifier" prefHeight="32.0" prefWidth="278.0" style="-fx-background-color: #373737;" text="Modifier votre compte" />
+      <Separator layoutX="560.0" layoutY="451.0" prefHeight="3.0" prefWidth="239.0" />
+      <Separator prefWidth="200.0" />
+      <Separator layoutX="555.0" layoutY="120.0" prefHeight="3.0" prefWidth="230.0" />
+      <Label layoutX="481.0" layoutY="115.0" prefHeight="17.0" prefWidth="75.0" text=" Compte" />
+      <Label layoutX="471.0" layoutY="440.0" prefHeight="17.0" prefWidth="95.0" text=" Mot de passe" />
+    </children>
+</AnchorPane>

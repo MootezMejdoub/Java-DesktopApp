@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ReponseAdminController">
+   <children>
+      <MediaView fx:id="mediaViewRep" fitHeight="800.0" fitWidth="1300.0" layoutX="-78.0" layoutY="-19.0">
+         <effect>
+            <GaussianBlur radius="12.36" />
+         </effect>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </MediaView>
+      <ComboBox fx:id="EtatButton" cache="true" layoutX="274.0" layoutY="225.0" onAction="#etatReclamationchange" prefWidth="150.0" promptText="En attente" style="-fx-background-color: #AEB6BF; -fx-border-color: white; -fx-border-radius: 5; -fx-border-width: 4;" visibleRowCount="8">
+         
+         <effect>
+            <Glow />
+         </effect>
+      </ComboBox>
+      <Label layoutX="178.0" layoutY="226.0" prefHeight="38.0" prefWidth="80.0" text="Etat : " textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="154.0" layoutY="81.0" text="Reponse" textFill="WHITE">
+         <font>
+            <Font name="French Script MT" size="96.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="msgReply" alignment="TOP_LEFT" layoutX="196.0" layoutY="318.0" prefHeight="221.0" prefWidth="640.0" promptText="Message de Reponse" style="-fx-background-color: N/A; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 6;">
+         <font>
+            <Font name="Arial Narrow Bold Italic" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" height="33.44" radius="18.552500000000002" width="42.77" />
+         </effect></TextField>
+      <Button fx:id="EnvoyerRepButton" layoutX="357.0" layoutY="583.0" mnemonicParsing="false" onAction="#envoyerReponse" prefHeight="43.0" prefWidth="129.0" styleClass="btn" stylesheets="@reclamationvideo.css" text="Envoyer" />
+      <Button fx:id="AnnulerRepButton" layoutX="547.0" layoutY="583.0" mnemonicParsing="false" onAction="#annulerReponse" prefHeight="43.0" prefWidth="129.0" styleClass="btn" stylesheets="@reclamationvideo.css" text="Annuler" />
+      <StackPane fx:id="rootPane" layoutX="292.0" layoutY="332.0" prefHeight="194.0" prefWidth="427.0" />
+   </children>
+</AnchorPane>
